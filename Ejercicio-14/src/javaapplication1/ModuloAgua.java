@@ -15,12 +15,14 @@ public class ModuloAgua {
         this.temperatura = 16; //temperatura ambiente
     }
 
-    public void setTemperatura(int temperatura) {
+    private void setTemperatura(int temperatura) {
         this.temperatura = temperatura;
     }
-
-    public int getTemperatura() {
-        return temperatura;
+    
+    public void servirAgua(int temp) {
+        if(temp != this.temperatura) {
+            this.setTemperatura(temp);
+        }
     }
     
     

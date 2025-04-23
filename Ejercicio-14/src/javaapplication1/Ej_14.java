@@ -23,7 +23,7 @@ public class Ej_14 {
         Cafe expresso = new Cafe("expresso", 0, Textura.ESPUMOSA, 70);
         Cafe lagrima = new Cafe("lagrima", 3, Textura.LIQUIDA, 70);
        
-        maquina.setEncendida(true);
+        maquina.onOff();
         
         maquina.servirCafe(latte);
         maquina.servirCafe(latte);
@@ -34,7 +34,7 @@ public class Ej_14 {
         
         maquina.servirCafe(lagrima);
 
-        maquina.setEncendida(false);
+        maquina.onOff();
 
     }
     

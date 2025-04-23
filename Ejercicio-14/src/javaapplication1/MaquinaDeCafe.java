@@ -20,9 +20,7 @@ public class MaquinaDeCafe {
     }
     
     public void cargarLeche(int cantidad) {
-        if(cantidad > 0) {
-            leche.cargarLeche(cantidad);
-        }
+        leche.cargarLeche(cantidad);
     }
     
     
@@ -35,14 +33,11 @@ public class MaquinaDeCafe {
 
             if(leche.darLeche(cantLeche, textura)) {
 
-                if(agua.getTemperatura() != tempAgua) {
-                    agua.setTemperatura(tempAgua);
-                }
+                agua.servirAgua(tempAgua);
 
                 String nombre = cafe.getNombre();
 
                 System.out.println("El café " + nombre + " se ha servido correctamente.\n");
-
             } else {
                 System.out.println("ERROR: no hay sufuciente leche.\n");
             } 
@@ -52,10 +47,7 @@ public class MaquinaDeCafe {
         
     }
 
-    public void setEncendida(boolean encendida) {
-        this.encendida = encendida;
-    }
-    
-    
-    
+    public void onOff() {
+        this.encendida = !this.encendida;
+    } 
 }

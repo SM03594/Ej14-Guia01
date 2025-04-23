@@ -6,6 +6,6 @@ package javaapplication1;
 
 /**
  *
- * @author Alumno
+ * @author ulyses456
  */
 enum Textura { ESPUMOSA, NORMAL, LIQUIDA }

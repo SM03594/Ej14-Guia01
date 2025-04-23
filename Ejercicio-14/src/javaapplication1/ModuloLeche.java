@@ -23,15 +23,20 @@ public class ModuloLeche {
     }
     
     public void cargarLeche(int cantidad) {
-        int nuevaCant = this.cantidad + cantidad;
-        
-        if(nuevaCant <= this.capacidadLiquido) {
-            this.cantidad = nuevaCant;
+        if(cantidad > 0) {
+            int nuevaCant = this.cantidad + cantidad;
+            
+            if(nuevaCant <= this.capacidadLiquido) {
+                this.cantidad = nuevaCant;
+            } else {
+                this.cantidad = this.capacidadLiquido;
+            }
+
+            System.out.println("Leche cargada, cantidad de leche actual: " + this.cantidad + "\n");
         } else {
-            this.cantidad = this.capacidadLiquido;
+            System.out.println("Error: cantidad de leche invalida");
         }
         
-        System.out.println("Leche cargada, cantidad de leche actual: " + this.cantidad + "\n");
     }
     
     public boolean darLeche(int cantidad, Textura textura) {
